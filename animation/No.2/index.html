@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改变width实现方法</title>
+	<link rel="stylesheet" href="../../static/css/normalize.css">
+	<style>
+		.wrapper {
+			margin-top: 100px;
+			text-align: center;
+		}
+		.box {
+			display: inline-block;
+			margin-right: 30px;
+			width: 60px;
+			height: 70px;
+			line-height: 70px;
+			background-color: #f7f6f6;
+			border: 1px solid #ececec;
+		}
+		.box0 {
+			transform: translate(0, 0)
+		}
+
+		/* 通过 skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数： */
+		.box1 {			
+			transform: skew(30deg, 0);
+			-webkit-transform: skew(30deg, 0);
+		}
+		
+		/* 通过 scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数： */
+		.box2 {			
+			transform: scale(0.5, 1);
+			-webkit-transform: scale(0.5, 1);
+		}
+		
+		/* 通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。 */
+		.box3 {			
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+		}
+		
+		/* 通过 translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数 */
+		.box4 {			
+			transform: translate(10px, 20px);
+			-webkit-transform: translate(10px, 20px);
+		}
+		
+		/* 同时包含以上属性 */
+		.box5 {			
+			transform: skew(30deg, 0) scale(0.5, 1) rotate(45deg) translate(10px, 20px);
+			-webkit-transform: skew(30deg, 0) scale(0.5, 1) rotate(45deg) translate(10px, 20px);
+		}
+	</style>
+</head>
+<body>
+	<section class="wrapper">
+		<div class="box box0">box0</div>
+		<div class="box box1">box1</div>
+		<div class="box box2">box2</div>
+		<div class="box box3">box3</div>
+		<div class="box box4">box4</div>
+		<div class="box box5">box5</div>
+	</section>
+
+	<script src="../../static/js/jquery.js"></script>
+</body>
+</html>
