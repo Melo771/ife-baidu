@@ -10,8 +10,8 @@
 		}
 		
 		.wrap {
+			perspective: 600px;
 			position: relative;
-			perspective: 1600px;
 			width: 200px;
 			height: 200px;
 			margin: 200px auto;
@@ -25,7 +25,6 @@
 			  -ms-transform-style: preserve-3d;
 			  -o-transform-style: preserve-3d;
 			  transform-style: preserve-3d;
-				/* transform: rotateX(-30deg) rotateY(-60deg); */
 				transition: all 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 		}
 
@@ -36,6 +35,7 @@
 			box-sizing: border-box;
 			border: 2px solid rgb(30, 129, 241);
 			background-color: rgb(17, 59, 105);
+			opacity: 0.5;
 		}
 
 		.side1 {
@@ -58,7 +58,7 @@
 		}
 
 		.cube:hover {
-			transform: rotateX(-30deg) rotateY(-160deg);
+			transform: rotateY(-160deg);
 		}
 	</style>
 </head>
