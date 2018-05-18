@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>纯 CSS 制作绕中轴旋转的立方体</title>
-	<link rel="stylesheet" href="../../static/css/normalize.css">
-	<style>
-		body {
-			background: #000;
-		}
-		
-		.wrap {
-			perspective: 600px;
-			position: relative;
-			width: 200px;
-			height: 200px;
-			margin: 200px auto;
-		}
+  <meta charset="UTF-8">
+  <title>纯 CSS 制作绕中轴旋转的立方体</title>
+  <link rel="stylesheet" href="../../static/css/normalize.css">
+  <style>
+  body {
+    background: #000;
+  }
 
-		.cube {
-			width: 200px;
-			height: 200px;
-			-webkit-transform-style: preserve-3d;
-			  -moz-transform-style: preserve-3d;
-			  -ms-transform-style: preserve-3d;
-			  -o-transform-style: preserve-3d;
-			  transform-style: preserve-3d;
-				transition: all 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-		}
+  .wrap {
+    perspective: 600px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+  }
 
-		.cube>div {
-			position: absolute;
-			width: 200px;
-			height: 200px;
-			box-sizing: border-box;
-			border: 2px solid rgb(30, 129, 241);
-			background-color: rgb(17, 59, 105);
-			opacity: 0.5;
-		}
+  .cube {
+    width: 200px;
+    height: 200px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
 
-		.side1 {
-			transform: rotateX(90deg) translateZ(100px);
-		}
-		.side2 {
-			transform: rotateX(-90deg) translateZ(100px);
-		}
-		.side3 {
-			transform: rotateY(90deg) translateZ(-100px);
-		}
-		.side4 {
-			transform: rotateY(90deg) translateZ(100px);
-		}
-		.side5 {
-			transform: translateZ(100px);
-		}
-		.side6 {
-			transform: translateZ(-100px);
-		}
+  .cube>div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 2px solid rgb(30, 129, 241);
+    background-color: rgb(17, 59, 105);
+    opacity: 0.5;
+  }
 
-		.cube:hover {
-			transform: rotateY(-160deg);
-		}
-	</style>
+  .side1 {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+
+  .side2 {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+
+  .side3 {
+    transform: rotateY(90deg) translateZ(-100px);
+  }
+
+  .side4 {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+
+  .side5 {
+    transform: translateZ(100px);
+  }
+
+  .side6 {
+    transform: translateZ(-100px);
+  }
+
+  .cube:hover {
+    transform: rotateY(-160deg);
+  }
+  </style>
 </head>
-<body>
-	
-	<div class="wrap">
-		<div class="cube">
-			<div class="side1"></div>
-			<div class="side2"></div>
-			<div class="side3"></div>
-			<div class="side4"></div>
-			<div class="side5"></div>
-			<div class="side6"></div>
-		</div>
-	</div>
 
-	<script src="../../static/js/jquery.js"></script>
+<body>
+  <div class="wrap">
+    <div class="cube">
+      <div class="side1"></div>
+      <div class="side2"></div>
+      <div class="side3"></div>
+      <div class="side4"></div>
+      <div class="side5"></div>
+      <div class="side6"></div>
+    </div>
+  </div>
+  <script src="../../static/js/jquery.js"></script>
 </body>
+
 </html>
